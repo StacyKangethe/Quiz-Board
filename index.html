@@ -10,67 +10,109 @@
 </head>
 
 <body>
-  <h1>Quiz Board</h1>
-  <p>Answer all of the following questions:</p>
-  <p class="question">1.How would one declare a string variable?</p>
-  <div class="radio">
-    <ul>
-      <label id="correctString1"><input type="radio" name="q1" value="1">Any of these</label><br>
-      <label><input type="radio" name="q1" value="0">var fName="Mary";</label><br>
-      <label><input type="radio" name="q1" value="0">var names="7";</label><br>
-      <label><input type="radio" name="q1" value="0">var fName=new string;</label><br>
-    </ul>
-  </div>
-  <p class="question">2.What is the difference between a while loop and a do...while loop?</p>
-  <div class="radio">
-    <ul>
-      <label id="correctString2"><input type="radio" name="q2" value="1">The code inside a do...while loop will always be executed at least once,even if the condition is false.</label><br>
-      <label><input type="radio" name="q2" value="0">The code inside a while loop will always be executed at least once,even if the condition is false.</label><br>
-      <label><input type="radio" name="q2" value="0">There is no difference between them.</label><br>
-    </ul>
-  </div>
-  <p class="question">3.Which is NOT a primitive data type in JavaScript?</p>
-  <div class="radio">
-    <ul>
-      <label><input type="radio" name="q3" value="0">Boolean</label><br>
-      <label><input type="radio" name="q3" value="0">Number</label><br>
-      <Label><input type="radio" name="q3" value="0">String</label><br>
-      <label id="correctString3"><input type="radio" name="q3" value="1">Character</label><br>
-    </ul>
-  </div>
-  <p class="question">4.Which method of an Array object adds and/or removes elements from an array?</p>
-  <div class="radio">
-    <ul>
-      <label><input type="radio" name="q4" value="0">Reverse</label><br>
-      <label><input type="radio" name="q4" value="0">Shift</label><br>
-      <Label id="correctString4"><input type="radio" name="q4" value="1">Slice</label><br>
-      <label><input type="radio" name="q4" value="0">Splice</label><br>
-    </ul>
-  </div>
-  <p class="question">5. What is the correct JavaScript syntax to write "Hello World"?</p>
-  <div class="radio">
-    <ul>
-      <label><input type="radio" name="q5" value="0"> System.out.println("Hello World")</label><br>
-      <label><input type="radio" name="q5" value="0"> println ("Hello World")</label><br>
-      <Label id="correctString5"><input type="radio" name="q5" value="1">document.write("Hello World")</label><br>
-      <label><input type="radio" name="q5" value="0">response.write("Hello World")</label><br>
-    </ul>
-  </div>
-  <div class="submitter">
-  <input class="quizSubmit" id="submitButton" onClick="submitQuiz()" type="submit" value="Submit" />
-  </div>
-
-<!--show only wrong answers on submit-->
-  <div class="quizAnswers" id="correctAnswer1"></div>
-    <div class="quizAnswers" id="correctAnswer2"></div>
-  <div class="quizAnswers" id="correctAnswer3"></div>
-  <div class="quizAnswers" id="correctAnswer4"></div>
-
-<!--show score upon submit-->
+  <h2 class="quizHeader">Quiz Board</h2>
   <div>
-    <h2 class="quizScore" id="userScore"></h2>
-  </div>
-</div>
-</body>
+    <p class="question">1.How would one declare a string variable?</p>
 
-</html>
+    <ul>
+      <input class="answer" type="radio" name="q1" value="1">
+      <label id="correctString1">Any of these</label>
+      <br>
+      <input class="answer" type="radio" name="q1" value="0">
+      <label>var fName="Mary";</label>
+      <br>
+      <input class="answer" type="radio" name="q1" value="0">
+      <label>var names="7";</label>
+      <br>
+      <input class="answer" type="radio" name="q1" value="0">
+      <label>var fName=new string;</label>
+    </ul>
+  </div>
+  </td>
+  <td>
+    <div>
+      <p class="question">2.What is the difference between a while loop and a do...while loop?</p>
+
+      <ul>
+        <input class="answer" type="radio" name="q2" value="0">
+        <label>The code inside a while loop will always be executed at least once,even if the condition is false.</label>
+        <br>
+        <input class="answer" type="radio" name="q2" value="1">
+        <label id="correctString2">The code inside a do...while loop will always be executed at least once,even if the condition is false.</label>
+        <br>
+        <input class="answer" type="radio" name="q2" value="0">
+        <label>There is no difference</label>
+        <br>
+        <input class="answer" type="radio" name="q2" value="0">
+        <label>I don't know.</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">3.Which is not a primitive data type in JavaScript?</p>
+
+      <ul>
+        <input class="answer" type="radio" name="q3" value="0">
+        <label>Boolean</label>
+        <br>
+        <input class="answer" type="radio" name="q3" value="1">
+        <label id="correctString3">Character</label>
+        <br>
+        <input class="answer" type="radio" name="q3" value="0">
+        <label>Number</label>
+        <br>
+        <input class="answer" type="radio" name="q3" value="0">
+        <label>String</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">4.What is the correct JavaScript syntax to write "Hello World"?</p>
+
+      <ul>
+        <input class="answer" type="radio" name="q4" value="0">
+        <label>System.out.println("Hello World")</label>
+        <br>
+        <input class="answer" type="radio" name="q4" value="1">
+        <label id="correctString4">document.write("Hello World")</label>
+        <br>
+        <input class="answer" type="radio" name="q4" value="0">
+        <label>println ("Hello World")</label>
+        <br>
+        <input class="answer" type="radio" name="q4" value="0">
+        <label>response.write("Hello World")</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">5.What is the correct syntax for referring to an external script called " abc.js"?</p>
+
+      <ul>
+        <input class="answer" type="radio" name="q5" value="0">
+        <label>script href=" abc.js"</label>
+        <br>
+        <input class="answer" type="radio" name="q5" value="1">
+        <label id="correctString4">script src=" abc.js"</label>
+        <br>
+        <input class="answer" type="radio" name="q5" value="0">
+        <label>script name=" abc.js"></label>
+        <br>
+        <input class="answer" type="radio" name="q5" value="0">
+        <label>None of the above</label>
+      </ul>
+    </div>
+
+      <div class="submitter"><input class="quizSubmit" id="submitButton" onClick="submitQuiz()" type="submit" value="Submit">
+        </div>
+
+    <!--show only wrong answers on submit-->
+        <div class="quizAnswers" id="correctAnswer1"></div>
+    	    <div class="quizAnswers" id="correctAnswer2"></div>
+        <div class="quizAnswers" id="correctAnswer3"></div>
+        <div class="quizAnswers" id="correctAnswer4"></div>
+        <div class="quizAnswers" id="correctAnswer5"></div>
+
+    <!--show score upon submit-->
+        <div>
+        	<h2 class="quizScore" id="userScore"></h2>
+        </div>
+    	</div>
+
+    </body>
