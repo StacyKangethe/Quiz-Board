@@ -5,114 +5,58 @@
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script scr="js/scripts.jss"></script>
+  <script src="js/scripts.js"></script>
   <title>JavaScript Quiz Board</title>
 </head>
 
 <body>
-  <h2 class="quizHeader">Quiz Board</h2>
-  <div>
-    <p class="question">1.How would one declare a string variable?</p>
-
-    <ul>
-      <input class="answer" type="radio" name="q1" value="1">
-      <label id="correctString1">Any of these</label>
-      <br>
-      <input class="answer" type="radio" name="q1" value="0">
-      <label>var fName="Mary";</label>
-      <br>
-      <input class="answer" type="radio" name="q1" value="0">
-      <label>var names="7";</label>
-      <br>
-      <input class="answer" type="radio" name="q1" value="0">
-      <label>var fName=new string;</label>
-    </ul>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Javascript Questions</h1>
   </div>
-  </td>
-  <td>
-    <div>
-      <p class="question">2.What is the difference between a while loop and a do...while loop?</p>
-
-      <ul>
-        <input class="answer" type="radio" name="q2" value="0">
-        <label>The code inside a while loop will always be executed at least once,even if the condition is false.</label>
-        <br>
-        <input class="answer" type="radio" name="q2" value="1">
-        <label id="correctString2">The code inside a do...while loop will always be executed at least once,even if the condition is false.</label>
-        <br>
-        <input class="answer" type="radio" name="q2" value="0">
-        <label>There is no difference</label>
-        <br>
-        <input class="answer" type="radio" name="q2" value="0">
-        <label>I don't know.</label>
-      </ul>
-    </div>
-    <div>
-      <p class="question">3.Which is not a primitive data type in JavaScript?</p>
-
-      <ul>
-        <input class="answer" type="radio" name="q3" value="0">
-        <label>Boolean</label>
-        <br>
-        <input class="answer" type="radio" name="q3" value="1">
-        <label id="correctString3">Character</label>
-        <br>
-        <input class="answer" type="radio" name="q3" value="0">
-        <label>Number</label>
-        <br>
-        <input class="answer" type="radio" name="q3" value="0">
-        <label>String</label>
-      </ul>
-    </div>
-    <div>
-      <p class="question">4.What is the correct JavaScript syntax to write "Hello World"?</p>
-
-      <ul>
-        <input class="answer" type="radio" name="q4" value="0">
-        <label>System.out.println("Hello World")</label>
-        <br>
-        <input class="answer" type="radio" name="q4" value="1">
-        <label id="correctString4">document.write("Hello World")</label>
-        <br>
-        <input class="answer" type="radio" name="q4" value="0">
-        <label>println ("Hello World")</label>
-        <br>
-        <input class="answer" type="radio" name="q4" value="0">
-        <label>response.write("Hello World")</label>
-      </ul>
-    </div>
-    <div>
-      <p class="question">5.What is the correct syntax for referring to an external script called " abc.js"?</p>
-
-      <ul>
-        <input class="answer" type="radio" name="q5" value="0">
-        <label>script href=" abc.js"</label>
-        <br>
-        <input class="answer" type="radio" name="q5" value="1">
-        <label id="correctString4">script src=" abc.js"</label>
-        <br>
-        <input class="answer" type="radio" name="q5" value="0">
-        <label>script name=" abc.js"></label>
-        <br>
-        <input class="answer" type="radio" name="q5" value="0">
-        <label>None of the above</label>
-      </ul>
-    </div>
-
-      <div class="submitter"><input class="quizSubmit" id="submitButton" onClick="submitQuiz()" type="submit" value="Submit">
-        </div>
-
-    <!--show only wrong answers on submit-->
-        <div class="quizAnswers" id="correctAnswer1"></div>
-    	    <div class="quizAnswers" id="correctAnswer2"></div>
-        <div class="quizAnswers" id="correctAnswer3"></div>
-        <div class="quizAnswers" id="correctAnswer4"></div>
-        <div class="quizAnswers" id="correctAnswer5"></div>
-
-    <!--show score upon submit-->
-        <div>
-        	<h2 class="quizScore" id="userScore"></h2>
-        </div>
-    	</div>
-
-    </body>
+    <p><strong>Course Details:</strong>This Quiz tests your basic knowledge in JavaScript.It contains 5 question,each 2marks and there is no time limit.Maximum Score<strong>(10marks)</strong></p>
+    <p style="text-align: center">You shall get your results immediately you submit your work.Let's Begin!</p>
+  <div class="form-group">
+    <label for="name">First Name:</label>
+    <input type="text" id="lastName">
+  </div>
+  <div class="form-group">
+    <label for="name">Last Name:</label>
+    <input type="text" id="firstName">
+  </div>
+<button id="startBtn" class="btn btn-success">Start Quiz</button>
+</div>
+<br>
+<div class="container" id="quiz">
+<form id="score">
+    <p>1.Which is NOT a primitive data type in JavaScript?</p>
+    <input type="radio" name="q1" value="0">Boolean<br>
+    <input type="radio" name="q1" value="0">Number<br>
+    <input type="radio" name="q1" value="0">String<br>
+    <input type="radio" name="q1" value="2">Character<br>
+  <br>
+    <p>2.How would one declare a string variable?</p>
+    <input type="radio" name="q2" value="2">Any of these<br>
+    <input type="radio" name="q2" value="0">var fName='Mary';<br>
+    <input type="radio" name="q2" value="0">var names='7';<br>
+    <input type="radio" name="q2" value="0">var fName=new string;<br>
+  <br>
+    <p>3.Which of these will throw a syntax error?</p>
+    <input type="radio" name="q3" value="0">if (x===1 {}<br>
+    <input type="radio" name="q3" value="0">if (x=1) {}<br>
+    <input type="radio" name="q3" value="2">if (x====1) {}<br>
+    <input type="radio" name="q3" value="0">if (x!=1) {}<br>
+  <br>
+    <p>4.What is the difference between a while loop and a do...while loop?</p>
+    <input type="radio" name="q4" value="2">The code inside a do...while loop will always be executed at least once,even if the codition is false<br>
+    <input type="radio" name="q4" value="0">The code inside a while loop will always be executed at least once,even if the codition is false<br>
+    <input type="radio" name="q4" value="0">There is no difference between them<br>
+  <br>
+    <p>5.Which method of an Array object adds and/or removes elements from an array?</p>
+    <input type="radio" name="q5" value="0">Reverse<br>
+    <input type="radio" name="q5" value="0">Splice<br>
+    <input type="radio" name="q5" value="2">Slice<br>
+    <input type="radio" name="q5" value="0">Shift<br>
+  <input type="submit" value="Submit">
+</form>
+</div>
